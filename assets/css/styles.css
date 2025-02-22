@@ -1,0 +1,490 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #6200ea 0%, #ff66cc 100%);
+    --text-gradient: linear-gradient(135deg, #00aaff 0%, #ff66cc 100%);
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Gradient Button */
+.gradient-button {
+    background: var(--primary-gradient);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(98, 0, 234, 0.3);
+}
+
+/* Navbar Styles */
+.bg-dark-transparent {
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 120px 0 60px;
+    background: radial-gradient(circle at top right, rgba(98, 0, 234, 0.1) 0%, transparent 70%);
+}
+
+/* Profile Card */
+.profile-card {
+    background: var(--card-bg);
+    border-radius: 25px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 2rem;
+    padding: 4px;
+    border-radius: 20px;
+    background: var(--primary-gradient);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    background: var(--dark-bg);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links .btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+}
+
+.social-links .btn:hover {
+    transform: translateY(-3px);
+    background: var(--primary-gradient);
+    border-color: transparent;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section h1,
+.hero-section p,
+.hero-section .btn {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.hero-section p {
+    animation-delay: 0.2s;
+}
+
+.hero-section .btn {
+    animation-delay: 0.4s;
+}
+
+/* Skills Section */
+.bg-darker {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.skill-tags .tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.skill-tags .tag:hover {
+    background: var(--primary-gradient);
+}
+
+/* Common Page Styles */
+.page-header {
+    padding: 120px 0 60px;
+    background: radial-gradient(circle at top right, rgba(98, 0, 234, 0.1) 0%, transparent 70%);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Form Styles */
+.form-control {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    background-color: var(--card-bg);
+    border-color: rgba(98, 0, 234, 0.5);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(98, 0, 234, 0.25);
+}
+
+/* Card Styles */
+.content-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-gradient);
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: -2.35rem;
+    top: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+}
+
+/* Footer Styles */
+.page-footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-footer .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.page-footer .links a:hover {
+    color: #ff66cc;
+}
+
+/* Project Page Styles */
+.project-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.project-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-buttons .btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Info Item Styles */
+.info-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.info-item i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form Select Styles */
+.form-select {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.form-select:focus {
+    background-color: var(--card-bg);
+    border-color: rgba(98, 0, 234, 0.5);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(98, 0, 234, 0.25);
+}
+
+/* Additional Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.skill-tags .tag {
+    animation: fadeIn 0.3s ease backwards;
+}
+
+/* Consistent skill tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-tags .tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.skill-tags .tag:hover {
+    background: var(--primary-gradient);
+    transform: translateY(-2px);
+}
+
+/* Project Detail Page Styles */
+.project-details-page {
+    background: radial-gradient(circle at top right, rgba(98, 0, 234, 0.1) 0%, transparent 70%);
+}
+
+.breadcrumb {
+    background: transparent;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #fff;
+}
+
+.project-info-card,
+.project-description-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-info-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-list li:before {
+    content: "•";
+    color: var(--primary-gradient);
+    position: absolute;
+    left: 0;
+}
+
+.project-images img {
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.02);
+}
+
+.image-gallery img {
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.tech-stack h5 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}

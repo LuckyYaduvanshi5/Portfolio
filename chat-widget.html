@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat - Lucky Singh Yaduvanshi</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <!-- Add the new separate Gemini CSS -->
+    <link rel="stylesheet" href="assets/css/gemini.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Chat Toggle Button -->
+    <button id="chat-toggle-btn" class="chat-toggle-btn" onclick="toggleChat()">
+        <i class="icon ion-android-bulb"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chat-widget" style="display: none;">
+        <div class="chat-header">
+            <h5>
+                <i class="icon ion-android-bulb me-2"></i>AI Assistant
+            </h5>
+            <button class="btn-minimize" onclick="toggleChat()">
+                <i class="icon ion-close-round"></i>
+            </button>
+        </div>
+        <div class="chat-body">
+            <div id="chat-messages" class="chat-messages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" class="form-control" 
+                       placeholder="Ask me anything...">
+                <button class="btn" onclick="sendMessage(document.getElementById('user-input').value); clearInput();">
+                    <i class="icon ion-paper-airplane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Google Generative AI SDK -->
+    <script src="https://ai.google.dev/api/js"></script>
+    <script src="assets/js/gemini-chat.js"></script>
+</body>
+</html> 

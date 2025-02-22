@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Downloads - Lucky's Portfolio</title>
+    <meta name="description" content="Download resources and materials from Lucky Singh Yaduvanshi">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #1a1b26;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent: #4f46e5;
+            --success: #059669;
+            --warning: #eab308;
+            --danger: #dc2626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .download-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .download-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .download-header p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .download-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .download-info {
+            animation: slideInLeft 0.5s ease-out;
+        }
+
+        .screenshot {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
+            animation: slideInRight 0.5s ease-out;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .download-progress {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .progress-icon {
+            font-size: 3rem;
+            color: var(--success);
+            margin-bottom: 1rem;
+            animation: spin 2s linear infinite;
+        }
+
+        .download-message {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .manual-download {
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pro-banner {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(6, 182, 212, 0.1));
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .pro-banner h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+        }
+
+        .discount-badge {
+            background: var(--success);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+
+        .urgency-text {
+            color: var(--warning);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+        }
+
+        .docs-link {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .docs-link a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .download-content {
+                grid-template-columns: 1fr;
+            }
+
+            .download-header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-transparent">
+        <div class="container">
+            <a class="navbar-brand gradient-text fw-bold" href="#">Lucky's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="download.html">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-primary gradient-button ms-2" href="hire-me.html">Hire Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page download-page">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">
+                    <span class="gradient-text">Downloads</span>
+                </h1>
+                <p class="lead">Access my software, resources, and materials</p>
+            </div>
+        </section>
+
+        <section class="portfolio-block download">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Codai Pro App -->
+                    <div class="col-md-6">
+                        <div class="content-card h-100">
+                            <div class="card-body">
+                                <div class="card-icon mb-4">
+                                    <i class="icon ion-code-working"></i>
+                                </div>
+                                <h3 class="gradient-text h5 mb-4">Codai Pro Desktop App</h3>
+                                <p class="mb-4">Download the Codai Pro desktop application for Windows. Experience AI-powered coding assistance offline.</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Windows</span>
+                                    <span class="tag">AI Assistant</span>
+                                    <span class="tag">Offline Mode</span>
+                                </div>
+                                <div class="d-grid">
+                                    <a href="https://codai.pro/download/windows" class="btn gradient-button w-100" download>
+                                        <i class="icon ion-android-download me-2"></i>Download for Windows
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VS Code Extension -->
+                    <div class="col-md-6">
+                        <div class="content-card h-100">
+                            <div class="card-body">
+                                <div class="card-icon mb-4">
+                                    <i class="icon ion-code"></i>
+                                </div>
+                                <h3 class="gradient-text h5 mb-4">VS Code Extension</h3>
+                                <p class="mb-4">Install the Codai Pro extension for Visual Studio Code to get AI assistance directly in your editor.</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">VS Code</span>
+                                    <span class="tag">Extension</span>
+                                    <span class="tag">AI Tools</span>
+                                </div>
+                                <div class="d-grid">
+                                    <a href="https://marketplace.visualstudio.com/items?itemName=codai-pro.extension" class="btn gradient-button w-100">
+                                        <i class="icon ion-android-download me-2"></i>Get Extension
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resume -->
+                    <div class="col-md-6">
+                        <div class="content-card h-100">
+                            <div class="card-body">
+                                <div class="card-icon mb-4">
+                                    <i class="icon ion-document-text"></i>
+                                </div>
+                                <h3 class="gradient-text h5 mb-4">Resume</h3>
+                                <p class="mb-4">Download my detailed resume in PDF format, highlighting my skills, experience, and achievements.</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Full Stack</span>
+                                    <span class="tag">AI/ML</span>
+                                    <span class="tag">Digital Marketing</span>
+                                </div>
+                                <div class="d-grid">
+                                    <a href="assets/downloads/Lucky_Singh_Resume.pdf" class="btn gradient-button w-100" download>
+                                        <i class="icon ion-android-download me-2"></i>Download Resume
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Resources -->
+                    <div class="col-md-6">
+                        <div class="content-card h-100">
+                            <div class="card-body">
+                                <div class="card-icon mb-4">
+                                    <i class="icon ion-folder"></i>
+                                </div>
+                                <h3 class="gradient-text h5 mb-4">Project Resources</h3>
+                                <p class="mb-4">Access documentation, case studies, and technical resources from my projects.</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Documentation</span>
+                                    <span class="tag">Case Studies</span>
+                                    <span class="tag">Resources</span>
+                                </div>
+                                <div class="d-grid">
+                                    <a href="assets/downloads/project_resources.zip" class="btn gradient-button w-100" download>
+                                        <i class="icon ion-android-download me-2"></i>Download Resources
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer py-3 border-top">
+        <div class="container my-4">
+            <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
+            <div class="social-icons"><a class="me-3" href="#"><i class="icon ion-social-facebook"></i></a><a class="me-3" href="#"><i class="icon ion-social-instagram-outline"></i></a><a class="me-3" href="#"><i class="icon ion-social-twitter"></i></a></div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

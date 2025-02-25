@@ -26,7 +26,8 @@
                     <li class="nav-item"><a class="nav-link active" href="projects-grid-cards.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="cv.html">Resume</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="btn btn-primary gradient-button ms-2" href="hire-me.html">Hire Me</a></li>
+                    <li class="nav-item"><a class="btn btn-primary gradient-button ms-2" href="hire-me.html">Hire Me</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -38,9 +39,16 @@
                 <div class="heading text-center mb-5">
                     <h2 class="gradient-text display-4 fw-bold">Recent Projects</h2>
                 </div>
+                <div class="text-center mb-4">
+                    <button class="btn btn-outline-light mx-2" onclick="filterProjects('all')">All</button>
+                    <button class="btn btn-outline-light mx-2" onclick="filterProjects('web')">Web Development</button>
+                    <button class="btn btn-outline-light mx-2" onclick="filterProjects('python')">Python</button>
+                    <button class="btn btn-outline-light mx-2" onclick="filterProjects('saas')">SaaS</button>
+                    <button class="btn btn-outline-light mx-2" onclick="filterProjects('apps')">Apps</button>
+                </div>
                 <div class="row g-4">
                     <!-- Codai Pro -->
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 project-item" data-category="saas">
                         <div class="project-card">
                             <img class="img-fluid" src="assets/img/projects/codai-pro.png" alt="Codai Pro">
                             <div class="project-content">
@@ -53,34 +61,36 @@
                                 </div>
                                 <div class="project-buttons">
                                     <a href="projects/codai-pro.html" class="btn gradient-button">View Details</a>
-                                    <a href="#" class="btn btn-outline-light">Visit Site</a>
+                                    <a href="https://olive-salmon-689445.hostingersite.com/"
+                                        class="btn btn-outline-light">Visit Site</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- VS Code Extension -->
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 project-item" data-category="apps">
                         <div class="project-card">
-                            <img class="img-fluid" src="assets/img/projects/codai-pro.jpg" alt="VS Code Extension">
+                            <img class="img-fluid" src="assets/img/projects/portfolio.jpg" alt="VS Code Extension">
                             <div class="project-content">
-                                <h3 class="gradient-text">AI Code Extension</h3>
-                                <p>VS Code extension for intelligent code completion and suggestions.</p>
+                                <h3 class="gradient-text">Portfolio</h3>
+                                <p>Developed a portfolio website using HTML, CSS, and JavaScript.</p>
                                 <div class="skill-tags mb-4">
-                                    <span class="tag">TypeScript</span>
-                                    <span class="tag">VS Code API</span>
-                                    <span class="tag">Node.js</span>
+                                    <span class="tag">javaScript</span>
+                                    <span class="tag">Html</span>
+                                    <span class="tag">bootstrap</span>
                                 </div>
                                 <div class="project-buttons">
-                                    <a href="projects/ai-code-extension.html" class="btn gradient-button">View Details</a>
-                                    <a href="#" class="btn btn-outline-light">Download</a>
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="luckyyaduvanshi5.github.io/Portfolio/" class="btn btn-outline-light">Visit
+                                        Site</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Task Manager -->
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 project-item" data-category="apps">
                         <div class="project-card">
                             <img class="img-fluid" src="assets/img/projects/Taska.png" alt="Task Manager">
                             <div class="project-content">
@@ -92,87 +102,224 @@
                                     <span class="tag">Cloud</span>
                                 </div>
                                 <div class="project-buttons">
-                                    <a href="projects/task-manager.html" class="btn gradient-button">View Details</a>
-                                    <a href="#" class="btn btn-outline-light">Try Now</a>
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="https://indigo-fly-878305.hostingersite.com/"
+                                        class="btn btn-outline-light">Try Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- E-commerce Platform -->
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 project-item" data-category="web">
                         <div class="project-card">
                             <img class="img-fluid" src="assets/img/projects/madebycraft.in.net.png" alt="E-commerce">
                             <div class="project-content">
                                 <h3 class="gradient-text">Madebycraft</h3>
-                                <p>Modern e-commerce website for a craft store.</p>
+                                <p>Modern e-commerce website for a craft store that Provide Furniture Related Services</p>
                                 <div class="skill-tags mb-4">
-                                    
                                     <span class="tag">Elementor</span>
                                     <span class="tag">PHP</span>
                                     <span class="tag">WooCommerce</span>
-                                    
                                 </div>
                                 <div class="project-buttons">
-                                    <a href="projects/shopsmart.html" class="btn gradient-button">View Details</a>
-                                    <a href="#" class="btn btn-outline-light">Visit Store</a>
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="https://madebycraft.in.net/" class="btn btn-outline-light">Visit Store</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- AI Chat Bot -->
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 project-item" data-category="python">
                         <div class="project-card">
-                            <img class="img-fluid" src="assets/img/projects/codai-pro.jpg" alt="AI Chat Bot">
+                            <img class="img-fluid" src="assets/img/projects/LandingPage.png" alt="AI Chat Bot">
                             <div class="project-content">
-                                <h3 class="gradient-text">Smart Chat AI</h3>
-                                <p>Intelligent chatbot with natural language processing capabilities.</p>
+                                <h3 class="gradient-text">Product Sales Landing Page</h3>
+                                <p>Digital Product Selling langing page For Selling Video Editing Pack </p>
                                 <div class="skill-tags mb-4">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">TensorFlow</span>
-                                    <span class="tag">NLP</span>
+                                    <span class="tag">Wordpress</span>
+                                    <span class="tag">Elementor</span>
+                                    <span class="tag">CashFree</span>
                                 </div>
                                 <div class="project-buttons">
-                                    <a href="projects/smart-chat-ai.html" class="btn gradient-button">View Details</a>
-                                    <a href="#" class="btn btn-outline-light">Demo</a>
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="https://demo.boostsaledigital.com/" class="btn btn-outline-light">Visit
+                                        Site</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Portfolio Website -->
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 project-item" data-category="web">
                         <div class="project-card">
-                            <img class="img-fluid" src="assets/img/projects/codai-pro.jpg" alt="Portfolio">
+                            <img class="img-fluid"
+                                src="assets/img/projects/Top Digital Products for Reselling in 2024 - Kartzon.png"
+                                alt="Portfolio">
                             <div class="project-content">
-                                <h3 class="gradient-text">Dev Portfolio</h3>
-                                <p>Modern portfolio website with dark theme and gradient effects.</p>
+                                <h3 class="gradient-text">Kartzon</h3>
+                                <p>Modern digital product selling marketplace to sell digital bundels</p>
                                 <div class="skill-tags mb-4">
-                                    <span class="tag">React</span>
-                                    <span class="tag">SCSS</span>
-                                    <span class="tag">Bootstrap</span>
+                                    <span class="tag">Wordpress</span>
+                                    <span class="tag">Elementor</span>
+                                    <span class="tag">WooCommerce</span>
                                 </div>
                                 <div class="project-buttons">
-                                    <a href="projects/dev-portfolio.html" class="btn gradient-button">View Details</a>
-                                    <a href="#" class="btn btn-outline-light">Source Code</a>
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="boostsaledigital.com" class="btn btn-outline-light">Visit Site</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <!-- <--OP Construction-- -->
+                    <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                        <div class="project-card">
+                            <img class="img-fluid" src="assets/img/projects/OPConstruction.png" alt="Portfolio">
+                            <div class="project-content">
+                                <h3 class="gradient-text">OP-Construction</h3>
+                                <p>Professional website for a construction firm that showcase thair Services</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Wordpress</span>
+                                    <span class="tag">Elementor</span>
+                                    <span class="tag">Astra</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="https://mediumspringgreen-armadillo-391437.hostingersite.com/"
+                                        class="btn btn-outline-light">Visit Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <--MsDhawanEnginering- -->
+                    <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                        <div class="project-card">
+                            <img class="img-fluid" src="assets/img/projects/M_s Dhawan Electrikal Engineering.png"
+                                alt="Portfolio">
+                            <div class="project-content">
+                                <h3 class="gradient-text">MsDhawanEnginering</h3>
+                                <p>Website for an electrical engineering firm to showcase services.</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Wordpress</span>
+                                    <span class="tag">Elementor</span>
+                                    <span class="tag">Astra</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="https://msdhawanengg.com/" class="btn btn-outline-light">Visit Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <--MsDhawanEnginering- -->
+                    <!-- WPGlobal -->
+                    <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                        <div class="project-card">
+                            <img class="img-fluid" src="assets/img/projects/Wpglobal.png" alt="Portfolio">
+                            <div class="project-content">
+                                <h3 class="gradient-text">WPGlobal.in</h3>
+                                <p>Make a Hobby Project of Web Development Agency Website </p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Wordpress</span>
+                                    <span class="tag">Elementor</span>
+                                    <span class="tag">Astra</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="https://wpglobal.in/" class="btn btn-outline-light">Visit Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Taska Mobile App -->
+                    <div class="col-md-6 col-lg-4 project-item" data-category="apps">
+                        <div class="project-card">
+                            <img class="img-fluid" src="assets/img/projects/Fevicon  g.png" alt="Portfolio">
+                            <div class="project-content">
+                                <h3 class="gradient-text">Taska Mobile App</h3>
+                                <p>Taska TODO Mobile app Made with React Expo</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">Supabase</span>
+                                    <span class="tag">Expo go</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="#" class="btn btn-outline-light">TRY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 project-item" data-category="apps">
+                        <div class="project-card">
+                            <img class="img-fluid" src="assets/img/projects/Radhikajlr.png" alt="Portfolio">
+                            <div class="project-content">
+                                <h3 class="gradient-text">Radhika jewelry</h3>
+                                <p>E-commerce website for jewelry dropshipping.</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Wordpress</span>
+                                    <span class="tag">Elementor</span>
+                                    <span class="tag">Rank Math</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="radhikajewelry.in" class="btn btn-outline-light">TRY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 project-item" data-category="apps">
+                        <div class="project-card">
+                            <img class="img-fluid" src="assets/img/projects/Digistore.png" alt="Portfolio">
+                            <div class="project-content">
+                                <h3 class="gradient-text">Digi Store</h3>
+                                <p>Digital Products Dropshipping Store</p>
+                                <div class="skill-tags mb-4">
+                                    <span class="tag">Wordpress</span>
+                                    <span class="tag">Elementor</span>
+                                    <span class="tag">PHP</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="#" class="btn gradient-button">View Details</a>
+                                    <a href="shop.wpglobal.in" class="btn btn-outline-light">Visit Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- Close row g-4 -->
+            </div> <!-- Close container -->
         </section>
     </main>
 
     <footer class="page-footer py-3 border-top">
         <div class="container my-4">
             <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
-            <div class="social-icons"><a class="me-3" href="#"><i class="icon ion-social-facebook"></i></a><a class="me-3" href="#"><i class="icon ion-social-instagram-outline"></i></a><a class="me-3" href="#"><i class="icon ion-social-twitter"></i></a></div>
+            <div class="social-icons"><a class="me-3" href="#"><i class="icon ion-social-facebook"></i></a><a
+                    class="me-3" href="#"><i class="icon ion-social-instagram-outline"></i></a><a class="me-3"
+                    href="#"><i class="icon ion-social-twitter"></i></a></div>
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project-item');
+            projects.forEach(project => {
+                if (category === 'all' || project.dataset.category === category) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

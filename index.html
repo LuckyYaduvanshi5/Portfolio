@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Singh Yaduvanshi - Product Designer</title>
+    <meta name="description" content="Full Stack Developer & AI Enthusiast based in Jaipur, India">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#344C36',
+                        secondary: '#FAAD1B',
+                        white: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FAAD1B 0%, #FAAD1B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FAAD1B 0%, #FAAD1B 100%);
+        }
+        .service-card, .project-card, .tool-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover, .project-card:hover, .tool-card:hover {
+            transform: translateY(-5px);
+        }
+        .tag {
+            background-color: rgba(250, 173, 27, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+        .tag:hover {
+            background: #FAAD1B;
+            color: white;
+        }
+        .nav-rounded {
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 0.5rem;
+            background-color: #344C36;
+        }
+        .hello-box {
+            border: 2px solid #FAAD1B;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            position: relative;
+        }
+        .hello-box:before,
+        .hello-box:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #FAAD1B;
+            position: absolute;
+        }
+        .hello-box:before {
+            top: -4px;
+            left: -4px;
+        }
+        .hello-box:after {
+            top: -4px;
+            right: -4px;
+        }
+        .hello-box-bottom:before,
+        .hello-box-bottom:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #FAAD1B;
+            position: absolute;
+        }
+        .hello-box-bottom:before {
+            bottom: -4px;
+            left: -4px;
+        }
+        .hello-box-bottom:after {
+            bottom: -4px;
+            right: -4px;
+        }
+        
+        /* Mobile Responsiveness Improvements */
+        @media (max-width: 768px) {
+            .hero-image-container .bg-secondary {
+                height: 300px !important;
+                width: 300px !important;
+            }
+            
+            .highlight-card {
+                transform: scale(0.9);
+                margin-top: -10px;
+            }
+            
+            /* Adjust font sizes for mobile */
+            h1.text-5xl {
+                font-size: 2.25rem;
+            }
+            
+            h2.text-4xl {
+                font-size: 1.875rem;
+            }
+            
+            /* Improve spacing on mobile */
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            
+            /* Ensure mobile menu has smooth transition */
+            #mobile-menu {
+                transition: transform 0.3s ease-in-out;
+                display: flex;
+            }
+            
+            /* Better form layout on mobile */
+            .contact-form input,
+            .contact-form textarea {
+                padding: 0.75rem;
+            }
+            
+            /* Make FAQ section more visible on mobile */
+            #faqs {
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+            
+            #faqs button {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+            
+            #faqs .hidden {
+                display: block;
+            }
+            
+            /* Adjust stats in About section for mobile */
+            .grid.grid-cols-2.gap-8 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+            
+            .grid.grid-cols-2.gap-8 .bg-opacity-10 {
+                padding: 0.75rem;
+            }
+            
+            .grid.grid-cols-2.gap-8 h3 {
+                font-size: 1.5rem;
+            }
+            
+            .grid.grid-cols-2.gap-8 p {
+                font-size: 0.875rem;
+            }
+            
+            /* Make certifications visible on mobile */
+            #certifications .grid-cols-4 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/project-cards.css">
+    
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+</head>
+<body class="bg-white">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919667907515" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors duration-300">
+        <svg class="w-8 h-8 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+    
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 py-3">
+        <div class="container mx-auto px-4">
+            <div class="nav-rounded max-w-6xl mx-auto">
+                <nav class="flex justify-between items-center px-5 py-2">
+                    <a href="#" class="flex items-center">
+                        <div class="h-11 w-11 rounded-full bg-secondary text-primary flex items-center justify-center text-xl font-bold">L</div>
+                        <span class="ml-2 text-xl font-bold text-white">Lucky<span class="text-sm">.dev</span></span>
+                    </a>
+                    
+                    <div class="hidden md:flex space-x-8 flex-1 justify-center">
+                        <a href="#home" class="text-white hover:text-secondary transition-colors">Home</a>
+                        <a href="#services" class="text-white hover:text-secondary transition-colors">Services</a>
+                        <a href="#about" class="text-white hover:text-secondary transition-colors">About</a>
+                        <a href="#projects" class="text-white hover:text-secondary transition-colors">Projects</a>
+                        <a href="projects.html" class="text-white hover:text-secondary transition-colors">Projects Page</a>
+                        <a href="#blogs" class="text-white hover:text-secondary transition-colors">Blogs</a>
+                        <a href="#testimonials" class="text-white hover:text-secondary transition-colors">Testimonials</a>
+                    </div>
+                    
+                    <a href="#contact" class="hidden md:inline-block px-6 py-2 rounded-full bg-white text-primary font-medium hover:shadow-lg transition-all">
+                        Contact Me
+                    </a>
+                    
+                    <button class="md:hidden text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center max-w-6xl mx-auto">
+                <div class="lg:w-7/12 mb-10 lg:mb-0">
+                    <div class="hello-box hello-box-bottom mb-6 inline-block">
+                        <p class="text-sm">Hello There!</p>
+                    </div>
+                    
+                    <h1 class="text-5xl font-bold mb-3 text-primary">
+                        I'm <span class="gradient-text">Lucky Singh Yaduvanshi</span>,
+                    </h1>
+                    <h2 class="text-4xl font-bold mb-6 text-primary">
+                        Full Stack Developer & <br>
+                        AI Specialist
+                    </h2>
+                    
+                    <p class="text-gray-600 mb-8 max-w-xl">
+                        Experienced developer with 4+ years specializing in AI integration, cloud solutions, and responsive web applications. Creating innovative solutions that bridge technology and business needs.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="px-6 py-3 rounded-full bg-primary text-white font-medium hover:shadow-lg transition-all">
+                            View My Portfolio
+                            <span class="inline-block ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="assets/resume.pdf" download class="px-6 py-3 rounded-full bg-secondary text-primary font-medium hover:shadow-lg transition-all">
+                            Download Resume
+                            <span class="inline-block ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="#contact" class="px-6 py-3 rounded-full border border-gray-300 text-gray-700 font-medium hover:border-primary transition-all">
+                            Hire Me
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-5/12 relative">
+                    <div class="relative">
+                        <div class="bg-secondary rounded-full h-[450px] w-[450px] absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                        <img src="assets/img/profile.png" alt="Lucky Singh Yaduvanshi" class="w-full relative z-10">
+                        
+                        <div class="absolute top-10 -right-4 bg-white rounded-xl px-4 py-2 shadow-lg z-20">
+                            <div class="flex items-center">
+                                <div class="h-3 w-3 rounded-full bg-secondary mr-2"></div>
+                                <span class="text-sm font-medium">AI Specialist</span>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-4 left-10 bg-primary text-white rounded-xl px-4 py-2 shadow-lg z-20">
+                            <span class="text-sm font-medium">Full Stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Bar -->
+        <div class="container mx-auto px-4 mt-20">
+            <div class="flex flex-wrap justify-between items-center bg-secondary py-6 px-6 rounded-xl max-w-6xl mx-auto">
+                <div class="text-center py-2 px-4">
+                    <span class="block text-xl font-semibold">App Design</span>
+                </div>
+                <div class="hidden md:block text-center py-2 px-4">
+                    <span class="block text-xl font-semibold">Website Design</span>
+                </div>
+                <div class="hidden md:block text-center py-2 px-4">
+                    <span class="block text-xl font-semibold">Dashboard</span>
+                </div>
+                <div class="text-center py-2 px-4">
+                    <span class="block text-xl font-semibold">Wireframe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 max-w-6xl mx-auto">
+                <p class="text-secondary mb-2 flex items-center">
+                    <span class="inline-block h-px w-8 bg-secondary mr-3"></span>
+                    Services
+                </p>
+                <div class="flex justify-between items-center">
+                    <h2 class="text-4xl font-bold text-primary">
+                        <span class="gradient-text">Services</span> I Provide
+                    </h2>
+                    <a href="#" class="hidden md:flex items-center px-6 py-2 bg-white border border-gray-200 rounded-full hover:border-secondary transition-all">
+                        View All Services
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl p-8 h-full shadow-sm border border-gray-100">
+                    <div class="mb-6 bg-gray-100 inline-block p-4 rounded-md">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
+                            <path d="M15 21H9V12.6C9 12.2686 9.26863 12 9.6 12H14.4C14.7314 12 15 12.2686 15 12.6V21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.4 21H15V18.1C15 17.7686 15.2686 17.5 15.6 17.5H20.4C20.7314 17.5 21 17.7686 21 18.1V20.4C21 20.7314 20.7314 21 20.4 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 21V16.1C9 15.7686 8.73137 15.5 8.4 15.5H3.6C3.26863 15.5 3 15.7686 3 16.1V20.4C3 20.7314 3.26863 21 3.6 21H9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8 3H13.2C13.6418 3 14 3.35817 14 3.8V5.2C14 5.64183 13.6418 6 13.2 6H10.8C10.3582 6 10 5.64183 10 5.2V3.8C10 3.35817 10.3582 3 10.8 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 6V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-6">Creating intuitive, engaging, and accessible user interfaces that enhance user experience across platforms.</p>
+                    <a href="#" class="text-secondary flex items-center hover:text-primary transition-all">
+                        Learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl p-8 h-full shadow-sm border border-gray-100">
+                    <div class="mb-6 bg-gray-100 inline-block p-4 rounded-md">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
+                            <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.5 9.09H20.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.6947 13.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.6947 16.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.9955 13.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.9955 16.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.29431 13.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.29431 16.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Application Design</h3>
+                    <p class="text-gray-600 mb-6">Developing responsive mobile and web applications with modern technologies and intuitive interfaces.</p>
+                    <a href="#" class="text-secondary flex items-center hover:text-primary transition-all">
+                        Learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl p-8 h-full shadow-sm border border-gray-100">
+                    <div class="mb-6 bg-gray-100 inline-block p-4 rounded-md">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
+                            <path d="M22 8.5C22 12.09 19.09 15 15.5 15C15.33 15 15.15 14.99 14.98 14.98C14.73 11.81 12.19 9.26 9.00995 9.02C9.00995 8.84 8.99995 8.67 8.99995 8.5C8.99995 4.91 11.91 2 15.5 2C19.09 2 22 4.91 22 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 15.5C15 19.09 12.09 22 8.5 22C4.91 22 2 19.09 2 15.5C2 11.91 4.91 9 8.5 9C8.67 9 8.84 9.01 9.01 9.02C12.19 9.26 14.73 11.81 14.98 14.98C14.99 15.15 15 15.33 15 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.62 14.62L8.5 13L9.38 14.62L11 15.5L9.38 16.38L8.5 18L7.62 16.38L6 15.5L7.62 14.62Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Website Design</h3>
+                    <p class="text-gray-600 mb-6">Building beautiful, responsive, and high-performance websites that deliver exceptional user experiences.</p>
+                    <a href="#" class="text-secondary flex items-center hover:text-primary transition-all">
+                        Learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-20" style="background-color: #1a202c;">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center" style="color: #FAAD1B;">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    My Favorite Tools
+                </p>
+                <h2 class="text-4xl font-bold text-white">
+                    Exploring the <span style="color: #FAAD1B;">Tools</span><br>
+                    Behind My Designs
+                </h2>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+                <!-- Tool 1 - VS Code -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/vscode.png" alt="VS Code" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">95%</div>
+                    <span class="text-white text-sm">VS Code</span>
+                </div>
+                
+                <!-- Tool 2 - GitHub -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/github.png" alt="GitHub" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">98%</div>
+                    <span class="text-white text-sm">GitHub</span>
+                </div>
+                
+                <!-- Tool 3 - Cursor -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/cursor.png" alt="Cursor" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">90%</div>
+                    <span class="text-white text-sm">Cursor</span>
+                </div>
+                
+                <!-- Tool 4 - PowerBI -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/powerbi.png" alt="PowerBI" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">85%</div>
+                    <span class="text-white text-sm">PowerBI</span>
+                </div>
+                
+                <!-- Tool 5 - ChatGPT -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/chatgpt.png" alt="ChatGPT" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">90%</div>
+                    <span class="text-white text-sm">ChatGPT</span>
+                </div>
+                
+                <!-- Tool 6 - Copilot -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/github-copilot.png" alt="GitHub Copilot" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">95%</div>
+                    <span class="text-white text-sm">GitHub Copilot</span>
+                </div>
+                
+                <!-- Tool 7 - Azure -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/azure.png" alt="Azure" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">85%</div>
+                    <span class="text-white text-sm">Azure</span>
+                </div>
+                
+                <!-- Tool 8 - Google -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/google.png" alt="Google" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">95%</div>
+                    <span class="text-white text-sm">Google</span>
+                </div>
+                
+                <!-- Tool 9 - MS Office -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/msoffice.png" alt="MS Office" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">90%</div>
+                    <span class="text-white text-sm">MS Office</span>
+                </div>
+                
+                <!-- Tool 10 - Docker -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/docker.png" alt="Docker" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">85%</div>
+                    <span class="text-white text-sm">Docker</span>
+                </div>
+                
+                <!-- Tool 11 - WordPress -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/wordpress.png" alt="WordPress" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">92%</div>
+                    <span class="text-white text-sm">WordPress</span>
+                </div>
+                
+                <!-- Tool 12 - Hugging Face -->
+                <div class="text-center" style="width: 120px;">
+                    <div class="bg-white rounded-full p-6 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/logos/huggingface.png" alt="Hugging Face" class="w-12 h-12 object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-center text-white">85%</div>
+                    <span class="text-white text-sm">Hugging Face</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20" style="background-color: #f8f8f8;">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 max-w-6xl mx-auto">
+                <p class="text-yellow-500 mb-2 flex items-center" style="color: #FAAD1B;"></span>
+                    My Portfolio
+                </p>
+                <div class="flex justify-between items-center">
+                    <h2 class="text-4xl font-bold text-gray-800">
+                        My Latest <span style="color: #FAAD1B;">Projects</span>
+                    </h2>
+                    <a href="projects.html" class="hidden md:flex items-center px-6 py-2 rounded-full border border-gray-200 hover:border-yellow-500 transition-all" style="background-color: #344C36; color: white;">
+                        View All Projects
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Project 1 - Blog Prompt Generator -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/img/projects/blogpromptGenrator.png" alt="Blog Prompt Generator" class="w-full h-72 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0">
+                            <div class="flex flex-wrap gap-2 p-4">
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #FAAD1B;">UI/UX Design</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">Web App</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">React</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Blog Prompt Generator</h3>
+                        <a href="#" class="text-secondary flex items-center justify-end">
+                            <div class="h-10 w-10 rounded-full flex items-center justify-center" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Reels Counter -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/img/projects/reelscounter.png" alt="Reels Counter" class="w-full h-72 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0">
+                            <div class="flex flex-wrap gap-2 p-4">
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #FAAD1B;">UI/UX Design</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">Mobile App</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">React Native</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Reels Counter - Social Media Tool</h3>
+                        <a href="#" class="text-secondary flex items-center justify-end">
+                            <div class="h-10 w-10 rounded-full flex items-center justify-center" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Daily Notes -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/img/projects/dailynotes.png" alt="Daily Notes" class="w-full h-72 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0">
+                            <div class="flex flex-wrap gap-2 p-4">
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #FAAD1B;">UI/UX Design</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">Web App</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">Vue.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Daily Notes - Productivity App</h3>
+                        <a href="#" class="text-secondary flex items-center justify-end">
+                            <div class="h-10 w-10 rounded-full flex items-center justify-center" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 - CodAI Pro -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/img/projects/codai-pro.png" alt="CodAI Pro" class="w-full h-72 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0">
+                            <div class="flex flex-wrap gap-2 p-4">
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #FAAD1B;">UI/UX Design</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">Web App</span>
+                                <span class="text-white text-xs px-3 py-1 rounded-full" style="background-color: #344C36;">AI Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">CodAI Pro - AI Coding Assistant</h3>
+                        <a href="#" class="text-secondary flex items-center justify-end">
+                            <div class="h-10 w-10 rounded-full flex items-center justify-center" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20" style="background-color: #344C36;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="mb-6">
+                            <p class="mb-2 flex items-center text-white">
+                                <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                                About Me
+                            </p>
+                            <h2 class="text-4xl font-bold mb-6 text-white">I'm a Professional <span style="color: #FAAD1B;">Full Stack</span> Developer</h2>
+                            <p class="text-gray-300 mb-8">I am a versatile designer and developer with a passion for creating beautiful, functional, and user-centered digital experiences. With 3+ years of experience in the field, I specialize in crafting responsive web applications using modern frameworks and tools. My approach combines technical expertise with a keen eye for design to deliver solutions that not only work flawlessly but also engage users effectively.</p>
+                            
+                            <div class="grid grid-cols-2 gap-8 mb-8">
+                                <div class="bg-opacity-10 bg-white p-4 rounded-lg">
+                                    <h3 class="text-2xl font-bold mb-2 text-black">3+</h3>
+                                    <p class="text-black">Years of Experience</p>
+                                </div>
+                                <div class="bg-opacity-10 bg-white p-4 rounded-lg">
+                                    <h3 class="text-2xl font-bold mb-2 text-black">50+</h3>
+                                    <p class="text-black">Projects Completed</p>
+                                </div>
+                                <div class="bg-opacity-10 bg-white p-4 rounded-lg">
+                                    <h3 class="text-2xl font-bold mb-2 text-black">30+</h3>
+                                    <p class="text-black">Happy Clients</p>
+                                </div>
+                                <div class="bg-opacity-10 bg-white p-4 rounded-lg">
+                                    <h3 class="text-2xl font-bold mb-2 text-black">5+</h3>
+                                    <p class="text-black">Awards Won</p>
+                                </div>
+                            </div>
+                            
+                            <a href="resume.pdf" class="px-6 py-3 rounded-full font-medium inline-flex items-center" style="background-color: #FAAD1B; color: #344C36;">
+                                Download CV
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="assets/img/profile.png" alt="Lucky Singh Yaduvanshi" class="w-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 p-6 rounded-xl" style="background-color: #FAAD1B;">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold text-white mb-1">3+</h3>
+                                <p class="text-white opacity-80 text-sm">Years of Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Work Experience Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center" style="color: #FAAD1B;">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    Education & Work
+                </p>
+                <h2 class="text-4xl font-bold text-gray-800">
+                    My <span style="color: #FAAD1B;">Academic and</span><br>
+                    Professional Journey
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Education Column -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #FAAD1B;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold ml-4">Education</h3>
+                    </div>
+                    
+                    <!-- Education Item 1 -->
+                    <div class="mb-8">
+                        <p class="text-gray-500 mb-1">2025</p>
+                        <h4 class="text-xl font-bold mb-1">BCA</h4>
+                        <p class="text-gray-600">University of Commerce College, Jaipur</p>
+                        <p class="text-gray-500 text-sm">7.62 CGPA</p>
+                    </div>
+                    
+                    <!-- Education Item 2 -->
+                    <div class="mb-8">
+                        <p class="text-gray-500 mb-1">2022</p>
+                        <h4 class="text-xl font-bold mb-1">Class XII (Rajasthan Board)</h4>
+                        <p class="text-gray-600">Govt. School, Raja Park, Jaipur</p>
+                        <p class="text-gray-500 text-sm">83.80%</p>
+                    </div>
+                </div>
+                
+                <!-- Work Experience Column -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #FAAD1B;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold ml-4">Work Experience</h3>
+                    </div>
+                    
+                    <!-- Work Item 1 -->
+                    <div class="mb-8">
+                        <p class="text-gray-500 mb-1">2022 - Present</p>
+                        <h4 class="text-xl font-bold mb-1">Freelance Developer</h4>
+                        <p class="text-gray-600">Web Development & Design</p>
+                    </div>
+                    
+                    <!-- Work Item 2 -->
+                    <div class="mb-8">
+                        <p class="text-gray-500 mb-1">2020 - 2022</p>
+                        <h4 class="text-xl font-bold mb-1">WordPress Developer</h4>
+                        <p class="text-gray-600">Digital Marketing Agency</p>
+                    </div>
+                    
+                    <!-- Work Item 3 -->
+                    <div>
+                        <p class="text-gray-500 mb-1">2018 - 2020</p>
+                        <h4 class="text-xl font-bold mb-1">Junior Web Developer</h4>
+                        <p class="text-gray-600">Tech Solutions Ltd.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center" style="color: #FAAD1B;">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    Professional Growth
+                </p>
+                <h2 class="text-4xl font-bold text-gray-800">
+                    My <span style="color: #FAAD1B;">Certifications</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Certification Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+                    <div class="p-1" style="background-color: #344C36;">
+                        <div class="h-36 flex items-center justify-center" style="background-color: #f8f8f8;">
+                            <img src="assets/img/logos/microsoft.png" alt="Microsoft Logo" class="h-16 object-contain">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">Microsoft Certification</h3>
+                        <p class="text-gray-600 mb-3 text-sm">AI and Machine Learning</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">2024</span>
+                            <span class="px-3 py-1 text-xs rounded-full text-white" style="background-color: #FAAD1B;">Verified</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="#" class="text-sm font-medium flex items-center" style="color: #344C36;">
+                                View Certificate
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H3a1 1 0 110-2h9.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+                    <div class="p-1" style="background-color: #344C36;">
+                        <div class="h-36 flex items-center justify-center" style="background-color: #f8f8f8;">
+                            <img src="assets/img/logos/cisco.png" alt="Cisco Logo" class="h-16 object-contain">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">Cisco Certification</h3>
+                        <p class="text-gray-600 mb-3 text-sm">Cybersecurity Fundamentals</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">2023</span>
+                            <span class="px-3 py-1 text-xs rounded-full text-white" style="background-color: #FAAD1B;">Verified</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="#" class="text-sm font-medium flex items-center" style="color: #344C36;">
+                                View Certificate
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H3a1 1 0 110-2h9.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+                    <div class="p-1" style="background-color: #344C36;">
+                        <div class="h-36 flex items-center justify-center" style="background-color: #f8f8f8;">
+                            <img src="assets/img/logos/coursera.png" alt="Coursera Logo" class="h-16 object-contain">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">Coursera Certification</h3>
+                        <p class="text-gray-600 mb-3 text-sm">SEO Fundamentals</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">2023</span>
+                            <span class="px-3 py-1 text-xs rounded-full text-white" style="background-color: #FAAD1B;">Verified</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="#" class="text-sm font-medium flex items-center" style="color: #344C36;">
+                                View Certificate
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H3a1 1 0 110-2h9.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification Card 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+                    <div class="p-1" style="background-color: #344C36;">
+                        <div class="h-36 flex items-center justify-center" style="background-color: #f8f8f8;">
+                            <img src="assets/img/logos/google.png" alt="Google Logo" class="h-16 object-contain">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">Google Certification</h3>
+                        <p class="text-gray-600 mb-3 text-sm">Digital Marketing</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">2023</span>
+                            <span class="px-3 py-1 text-xs rounded-full text-white" style="background-color: #FAAD1B;">Verified</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="#" class="text-sm font-medium flex items-center" style="color: #344C36;">
+                                View Certificate
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H3a1 1 0 110-2h9.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center" style="color: #FAAD1B;">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    My Expertise
+                </p>
+                <h2 class="text-4xl font-bold text-gray-800">
+                    Professional <span style="color: #FAAD1B;">Skills</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Skill Category 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background-color: #344C36;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Programming Languages</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Python
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            C++
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            C
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            C#
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Java
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            JavaScript
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            PHP
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            SQL
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background-color: #344C36;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            HTML
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            CSS
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Bootstrap
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            WordPress
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Shopify
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background-color: #344C36;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">AI & Data Analysis</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            NumPy
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Pandas
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Matplotlib
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Seaborn
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            MySQL
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            MongoDB
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Power BI
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background-color: #344C36;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Digital Marketing & Tools</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            SEO
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Facebook Ads
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Content Writing
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Blogging
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Git & GitHub
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Microsoft Azure
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            AI Tools (ChatGPT, Claude)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20" style="background-color: #344C36;">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center text-white">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    Web Development Packages
+                </p>
+                <h2 class="text-4xl font-bold text-white">
+                    Professional <span style="color: #FAAD1B;">Web Development</span><br>
+                    Solutions
+                </h2>
+                <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+                    Choose a package that suits your business needs. All packages include professional design, mobile responsiveness, and expert support.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic Package -->
+                <div class="bg-white rounded-xl p-8 shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-2xl font-bold mb-4">Basic Website</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">₹5,000</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Up to 5 Pages
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Responsive Design
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Contact Form
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Basic SEO Setup
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Domain & Hosting (1 year)*
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full py-3 px-4 rounded-lg font-bold border-2 border-gray-300 hover:bg-gray-100 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Standard Package -->
+                <div class="bg-white rounded-xl p-8 shadow-lg transform scale-105 border-2" style="border-color: #FAAD1B;">
+                    <div class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full inline-block mb-2" style="background-color: #FAAD1B; color: white;">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Standard Website</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">₹15,000</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Up to 10 Pages
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Advanced Design
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Content Management System
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Social Media Integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Advanced SEO Setup
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Premium Domain & Hosting (1 year)*
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full py-3 px-4 rounded-lg font-bold text-white transition-colors" style="background-color: #FAAD1B;">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="bg-white rounded-xl p-8 shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-2xl font-bold mb-4">Premium Dynamic Website</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">₹25,000</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Unlimited Pages
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Custom Functionality
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            E-commerce Capabilities
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Custom Database Integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Advanced Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #FAAD1B;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Premium Domain & Hosting (1 year)*
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full py-3 px-4 rounded-lg font-bold border-2 border-gray-300 hover:bg-gray-100 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8 text-gray-300 max-w-3xl mx-auto">
+                <p class="text-sm">* Domain and hosting costs are included for the first year. After the first year, renewal fees will apply: Domain (₹1,000/year) and Hosting (₹2,500/year) based on standard usage. Custom requirements may affect pricing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center" style="color: #FAAD1B;">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    Clients Testimonials
+                </p>
+                <h2 class="text-4xl font-bold text-gray-800">
+                    The Impact of My Work:<br>
+                    <span style="color: #FAAD1B;">Client Testimonials</span>
+                </h2>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="flex mb-4">
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <span class="ml-2 text-gray-600 font-medium">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            "Lucky developed our e-commerce website with exceptional attention to detail. The site is not only beautiful but also performs incredibly well. Our mobile conversion rates improved by 30% after launch, and his SEO implementation helped us rank on the first page for our target keywords."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Neha Sharma" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Neha Sharma</h4>
+                                <p class="text-gray-600 text-sm">Founder, MadewithCraft.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="flex mb-4">
+                            <div class="flex text-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <span class="ml-2 text-gray-600 font-medium">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            "We hired Lucky to optimize our Shopify store which was slow and underperforming. He completely transformed the user experience, improving mobile usability by 25%. His technical skills and eye for design are truly exceptional. I would recommend him to anyone looking for a developer who delivers results."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Rahul Verma</h4>
+                                <p class="text-gray-600 text-sm">CEO, Appco Software Pvt. Ltd.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Dots -->
+                <div class="flex justify-center mt-10 space-x-2">
+                    <button class="w-10 h-10 rounded-full flex items-center justify-center" style="background-color: #344C36;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="w-10 h-10 rounded-full flex items-center justify-center" style="background-color: #FAAD1B;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center" style="color: #FAAD1B;">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    Get In Touch
+                </p>
+                <h2 class="text-4xl font-bold text-gray-800">
+                    Let's <span style="color: #FAAD1B;">Connect</span>
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Have a project in mind or want to discuss collaboration opportunities? I'd love to hear from you!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Phone</h4>
+                                <p class="text-gray-600">+91-9667907515</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-600">luckyaduvanshi5@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Location</h4>
+                                <p class="text-gray-600">Jaipur, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center text-white" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center text-white" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center text-white" style="background-color: #344C36;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+                    
+                    <form action="https://formspree.io/f/mzbloyvr" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <input type="text" id="name" name="name" placeholder="Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                            
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <textarea id="message" name="message" rows="5" placeholder="Message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3 px-4 rounded-lg font-bold text-white transition-colors" style="background-color: #344C36;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="py-20" style="background-color: #344C36;">
+        <div class="container mx-auto px-4">
+            <div class="mb-12 text-center">
+                <p class="mb-2 flex items-center justify-center text-white">
+                    <span class="inline-block h-px w-8 mr-3" style="background-color: #FAAD1B;"></span>
+                    FAQs
+                </p>
+                <h2 class="text-4xl font-bold text-white mb-4">
+                    Questions? <span style="color: #FAAD1B;">Look here.</span>
+                </h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-4">
+                    <button class="flex justify-between items-center w-full bg-white bg-opacity-10 text-white p-4 rounded-lg hover:bg-opacity-20 transition-all">
+                        <span class="text-lg font-medium">What industries have you worked in as a product designer?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </button>
+                    <div class="hidden bg-white bg-opacity-5 p-4 rounded-b-lg mt-1">
+                        <p class="text-gray-300">I've worked across multiple industries including e-commerce, education technology, digital marketing, and software development. My experience spans designing for both B2B and B2C applications with a focus on creating intuitive user experiences.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-4">
+                    <button class="flex justify-between items-center w-full bg-yellow-500 p-4 rounded-lg hover:bg-yellow-600 transition-all">
+                        <span class="text-lg font-medium">Can I download your resume/CV for information?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                        </svg>
+                    </button>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-b-lg mt-1">
+                        <p class="text-gray-300">Certainly! You can download my resume/CV directly from my website. It provides a comprehensive overview of my education, work experience, and design achievements. Simply click the "Download CV" button in the About section.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-4">
+                    <button class="flex justify-between items-center w-full bg-white bg-opacity-10 text-white p-4 rounded-lg hover:bg-opacity-20 transition-all">
+                        <span class="text-lg font-medium">Are you available for freelance design work?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </button>
+                    <div class="hidden bg-white bg-opacity-5 p-4 rounded-b-lg mt-1">
+                        <p class="text-gray-300">Yes, I am currently available for freelance web development and design projects. I offer services in web development, e-commerce solutions, SEO optimization, and UI/UX design. Feel free to contact me to discuss your project needs and timeline.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-4">
+                    <button class="flex justify-between items-center w-full bg-white bg-opacity-10 text-white p-4 rounded-lg hover:bg-opacity-20 transition-all">
+                        <span class="text-lg font-medium">What tools do you use for your design work?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </button>
+                    <div class="hidden bg-white bg-opacity-5 p-4 rounded-b-lg mt-1">
+                        <p class="text-gray-300">I use a variety of tools depending on the project requirements. My toolkit includes VS Code, GitHub, Docker, WordPress, Shopify, Figma, Adobe Creative Suite, Tailwind CSS, Bootstrap, and various AI tools like ChatGPT and Claude for efficient workflow. For analytics and SEO, I use Google Analytics, Search Console, and specialized tools like Ahrefs and Semrush.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-4">
+                    <button class="flex justify-between items-center w-full bg-white bg-opacity-10 text-white p-4 rounded-lg hover:bg-opacity-20 transition-all">
+                        <span class="text-lg font-medium">How do I navigate through your portfolio projects?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </button>
+                    <div class="hidden bg-white bg-opacity-5 p-4 rounded-b-lg mt-1">
+                        <p class="text-gray-300">You can navigate through my portfolio by scrolling through the Projects section on my website. Each project includes details about the technologies used, my role, and the outcomes achieved. You can click on any project to see more details or visit the live website. If you're looking for specific types of projects, you can use the category filters at the bottom of the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Strip -->
+    <div class="py-3 bg-yellow-500 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="flex items-center">
+                    <span class="text-base font-semibold">App Design</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-base font-semibold">Website Design</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-base font-semibold">Dashboard</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-base font-semibold">Wireframe</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hosting Info & CTA Section -->
+    <section id="cta" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6 text-gray-800">Ready to <span style="color: #FAAD1B;">Start Your Project</span>?</h2>
+                <p class="text-gray-600 mb-8 max-w-3xl mx-auto">
+                    I'm ready to help bring your vision to life. Let's create something amazing together using the latest technologies and best practices.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="#contact" class="px-8 py-4 rounded-full font-medium text-white transition-colors" style="background-color: #344C36;">
+                        Get In Touch
+                    </a>
+                    <a href="https://wa.me/919667907515" class="px-8 py-4 rounded-full font-medium text-white transition-colors bg-green-500 hover:bg-green-600 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                        </svg>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="mb-8 border-b pb-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-3xl font-bold">Let's <span style="color: #FAAD1B;">Connect</span> there</p>
+                </div>
+                <a href="#" class="bg-green-800 hover:bg-green-900 text-white font-medium rounded-full px-4 py-2 flex items-center">
+                    View All Blogs
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1 - Profile -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full bg-yellow-500 flex items-center justify-center text-xl font-bold mr-3">L</div>
+                        <h3 class="text-xl font-bold">Lucky</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Full Stack Developer specializing in crafting responsive, high-performance web applications with modern technologies.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://github.com/LuckyYaduvanshi5" class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center hover:bg-yellow-600 transition-all">
+                            <i class="icon ion-social-github text-lg"></i>
+                        </a>
+                        <a href="http://linkedin.com/in/lucky-yaduvanshi/" class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center hover:bg-yellow-600 transition-all">
+                            <i class="icon ion-social-linkedin text-lg"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center hover:bg-yellow-600 transition-all">
+                            <i class="icon ion-social-youtube text-lg"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center hover:bg-yellow-600 transition-all">
+                            <i class="icon ion-social-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center hover:bg-yellow-600 transition-all">
+                            <i class="icon ion-social-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 - Navigation -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-black">Home</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Services</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Projects</a></li>
+                        <li><a href="projects.html" class="text-gray-600 hover:text-black">Projects Page</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Blogs</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 - Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-600">+91-9667907515</li>
+                        <li class="text-gray-600">luckyaduvanshi5@gmail.com</li>
+                        <li class="text-gray-600">www.luckydev.com</li>
+                        <li class="text-gray-600">
+                            Jaipur, Rajasthan<br>
+                            India
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 - Get the latest info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Get the latest information</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Email address" class="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-l-md focus:outline-none">
+                        <button class="px-4 py-3 bg-green-800 text-white rounded-r-md hover:bg-green-900 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="pt-4 bg-green-900 -mx-4 px-4 py-4 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white text-sm mb-4 md:mb-0">
+                        Copyright © 2025 <span style="color: #FAAD1B;">Lucky</span>. All Rights Reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-white text-sm hover:text-yellow-500 transition-colors">User Terms & Conditions</a>
+                        <a href="#" class="text-white text-sm hover:text-yellow-500 transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion
+            const faqButtons = document.querySelectorAll('#faqs button');
+            const isMobile = window.innerWidth <= 768;
+            
+            // If on mobile, show all FAQ items by default
+            if (isMobile) {
+                document.querySelectorAll('#faqs button + div').forEach(div => {
+                    div.classList.remove('hidden');
+                });
+                
+                document.querySelectorAll('#faqs button svg').forEach(svg => {
+                    svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />';
+                });
+            }
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const plusIcon = this.querySelector('svg');
+                    
+                    // Toggle content visibility
+                    if (content.classList.contains('hidden')) {
+                        // Hide all other contents
+                        document.querySelectorAll('#faqs button + div').forEach(div => {
+                            div.classList.add('hidden');
+                        });
+                        
+                        // Reset all other button icons
+                        document.querySelectorAll('#faqs button svg').forEach(svg => {
+                            svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />';
+                        });
+                        
+                        // Show this content
+                        content.classList.remove('hidden');
+                        
+                        // Change this button icon to minus
+                        plusIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />';
+                    } else {
+                        // Don't hide content on mobile
+                        if (!isMobile) {
+                            // Hide this content
+                            content.classList.add('hidden');
+                            
+                            // Change this button icon to plus
+                            plusIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />';
+                        }
+                    }
+                });
+            });
+            
+            // Update FAQ display on window resize
+            window.addEventListener('resize', function() {
+                const currentIsMobile = window.innerWidth <= 768;
+                if (currentIsMobile !== isMobile) {
+                    window.location.reload();
+                }
+            });
+        });
+    </script>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="h-full flex flex-col p-8">
+            <div class="flex justify-end mb-8">
+                <button id="close-menu" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col space-y-6 text-center">
+                <a href="#home" class="text-white text-xl">Home</a>
+                <a href="#services" class="text-white text-xl">Services</a>
+                <a href="#about" class="text-white text-xl">About</a>
+                <a href="#projects" class="text-white text-xl">Projects</a>
+                <a href="projects.html" class="text-white text-xl">Projects Page</a>
+                <a href="#blogs" class="text-white text-xl">Blogs</a>
+                <a href="#testimonials" class="text-white text-xl">Testimonials</a>
+                <a href="#contact" class="text-white text-xl">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuButton = document.getElementById('close-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+            
+            closeMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+            });
+            
+            // Close menu when clicking mobile menu links
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        });
+    </script>
+    
+    <!-- Smooth Scrolling -->
+    <script src="assets/js/smooth-scroll.js"></script>
+    <!-- Include the project viewer script at the end of the page -->
+    <script src="admin/js/project-viewer.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuButton = document.getElementById('close-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+
+            closeMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+    </script>
+    
+    <!-- Project Data and Display -->
+    <script src="assets/js/project-data.js"></script>
+    <script src="assets/js/project-realtime.js"></script>
+    <script src="assets/js/project-modal.js"></script>
+    <script src="assets/js/project-form.js"></script>
+    <script src="assets/js/home-projects.js"></script>
+    
+    <!-- Smooth Scrolling -->
+    <script src="assets/js/smooth-scroll.js"></script>
+    
+    <!-- Contact Form -->
+    <script src="assets/js/contact-form.js"></script>
+    
+    <!-- Gemini Chat -->
+    <script src="assets/js/gemini-chat.js"></script>
+    
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+    
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 

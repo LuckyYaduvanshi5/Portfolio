@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Singh Yaduvanshi - Projects</title>
+    <meta name="description" content="Portfolio of projects by Lucky Singh Yaduvanshi">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/project-cards.css">
+    
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#344C36',
+                        secondary: '#FAAD1B',
+                        white: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FAAD1B 0%, #FAAD1B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FAAD1B 0%, #FAAD1B 100%);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .tag {
+            background-color: rgba(52, 76, 54, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+        .tag:hover {
+            background: #344C36;
+            color: white;
+        }
+        .nav-rounded {
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 0.5rem;
+            background-color: #344C36;
+        }
+        .highlight-project {
+            animation: highlight-pulse 1.5s ease-in-out;
+        }
+        
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(250, 173, 27, 0.8); }
+            70% { box-shadow: 0 0 0 10px rgba(250, 173, 27, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(250, 173, 27, 0); }
+        }
+        
+        /* Mobile Responsiveness Improvements */
+        @media (max-width: 768px) {
+            /* Adjust font sizes for mobile */
+            h1.text-5xl {
+                font-size: 2.25rem;
+            }
+            
+            h2.text-4xl {
+                font-size: 1.875rem;
+            }
+            
+            /* Improve spacing on mobile */
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            
+            /* Ensure filter categories are readable on small screens */
+            .flex.flex-wrap.justify-center.gap-3 {
+                gap: 0.5rem;
+            }
+            
+            .flex.flex-wrap.justify-center.gap-3 button {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Ensure mobile menu has smooth transition */
+            #mobile-menu {
+                transition: transform 0.3s ease-in-out;
+                display: flex;
+            }
+            
+            /* Footer adjustments for mobile */
+            footer .grid-cols-4 {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            
+            footer .grid-cols-4 > div {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 py-3">
+        <div class="container mx-auto px-4">
+            <div class="nav-rounded max-w-6xl mx-auto">
+                <nav class="flex justify-between items-center px-5 py-2">
+                    <a href="index.html" class="flex items-center">
+                        <div class="h-11 w-11 rounded-full bg-secondary text-primary flex items-center justify-center text-xl font-bold">L</div>
+                        <span class="ml-2 text-xl font-bold text-white">Lucky<span class="text-sm">.dev</span></span>
+                    </a>
+                    
+                    <div class="hidden md:flex space-x-8 flex-1 justify-center">
+                        <a href="index.html#home" class="text-white hover:text-secondary transition-colors">Home</a>
+                        <a href="index.html#services" class="text-white hover:text-secondary transition-colors">Services</a>
+                        <a href="index.html#about" class="text-white hover:text-secondary transition-colors">About</a>
+                        <a href="index.html#projects" class="text-white hover:text-secondary transition-colors">Projects</a>
+                        <a href="index.html#tools" class="text-white hover:text-secondary transition-colors">Tools</a>
+                        <a href="index.html#contact" class="text-white hover:text-secondary transition-colors">Contact</a>
+                    </div>
+                    
+                    <a href="index.html#contact" class="hidden md:inline-block px-6 py-2 rounded-full bg-white text-primary font-medium hover:shadow-lg transition-all">
+                        Contact Me
+                    </a>
+                    
+                    <button class="md:hidden text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="pt-32 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-secondary mb-2 inline-flex items-center">
+                    <span class="inline-block h-px w-8 bg-secondary mr-3"></span>
+                    My Portfolio
+                </p>
+                <h1 class="text-5xl font-bold mb-6">All <span class="gradient-text">Projects</span></h1>
+                <p class="text-gray-600 mb-8">
+                    Explore my complete collection of projects, from web applications and mobile apps to design work and open-source contributions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Categories -->
+    <section class="pb-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="px-6 py-2 bg-primary text-white rounded-full" data-category="all">All</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full hover:border-secondary" data-category="typescript">TypeScript</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full hover:border-secondary" data-category="javascript">JavaScript</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full hover:border-secondary" data-category="html">HTML/CSS</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full hover:border-secondary" data-category="web">Web Apps</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full hover:border-secondary" data-category="mobile">Mobile Apps</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto projects-grid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="md:col-span-1">
+                    <a href="#" class="flex items-center mb-6">
+                        <div class="h-11 w-11 rounded-full bg-secondary text-primary flex items-center justify-center text-xl font-bold">L</div>
+                    <span class="ml-2 text-xl font-bold text-white">Lucky<span class="text-sm">.dev</span></span>
+                    </a>
+                    <p class="text-gray-300 mb-6">Transforming complex problems into elegant solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="ion-social-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="ion-social-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="ion-social-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="ion-social-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="index.html#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">App Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1 text-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">Jaipur, India</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1 text-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">lucky60577@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1 text-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">+91-966-790-7515</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 max-w-6xl mx-auto">
+                <p class="text-center text-gray-400">&copy; 2025 Lucky Singh Yaduvanshi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="h-full flex flex-col p-8">
+            <div class="flex justify-end mb-8">
+                <button id="close-menu" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col space-y-6 text-center">
+                <a href="index.html#home" class="text-white text-xl">Home</a>
+                <a href="index.html#services" class="text-white text-xl">Services</a>
+                <a href="index.html#about" class="text-white text-xl">About</a>
+                <a href="index.html#projects" class="text-white text-xl">Projects</a>
+                <a href="index.html#tools" class="text-white text-xl">Tools</a>
+                <a href="index.html#contact" class="text-white text-xl">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuButton = document.getElementById('close-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+
+            closeMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+            });
+            
+            // Close menu when clicking mobile menu links
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        });
+    </script>
+    
+    <!-- Project Data and Display -->
+    <script src="assets/js/project-data.js"></script>
+    <script src="assets/js/project-realtime.js"></script>
+    <script src="assets/js/project-modal.js"></script>
+    <script src="assets/js/project-form.js"></script>
+    <script src="assets/js/projects-page.js"></script>
+    
+    <!-- Smooth Scrolling -->
+    <script src="assets/js/smooth-scroll.js"></script>
+    
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+    
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 

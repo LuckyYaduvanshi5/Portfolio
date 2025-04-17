@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Admin Panel</title>
+    <link rel="stylesheet" href="css/admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Mobile responsiveness improvements */
+        @media (max-width: 768px) {
+            .admin-main {
+                flex-direction: column;
+            }
+            
+            .admin-sidebar {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .admin-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            .admin-nav li {
+                margin: 0;
+            }
+            
+            .admin-content {
+                width: 100%;
+            }
+            
+            .content-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .filter-item {
+                width: 100%;
+            }
+            
+            .projects-filter {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .modal-content {
+                width: 90%;
+                max-width: 100%;
+                margin: 5% auto;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .form-actions button {
+                width: 100%;
+            }
+            
+            .header-right {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <div class="header-left">
+                <h1><i class="fas fa-tasks-alt"></i> Portfolio Admin</h1>
+            </div>
+            <div class="header-right">
+                <div class="theme-switch-wrapper">
+                    <span class="theme-icon"><i class="fas fa-sun"></i></span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="theme-icon"><i class="fas fa-moon"></i></span>
+                </div>
+                <button id="logout-btn" class="btn-secondary">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </header>
+        
+        <main class="admin-main">
+            <div class="admin-sidebar">
+                <ul class="admin-nav">
+                    <li class="active"><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                </ul>
+            </div>
+            
+            <div class="admin-content">
+                <div id="projects-section">
+                    <div class="content-header">
+                        <h2>Manage Projects</h2>
+                        <button id="add-project-btn" class="btn-primary">
+                            <i class="fas fa-plus"></i> Add New Project
+                        </button>
+                    </div>
+                    
+                    <div class="projects-filter">
+                        <div class="filter-item">
+                            <label for="filter-category">Filter by Category:</label>
+                            <select id="filter-category">
+                                <option value="all">All Categories</option>
+                                <option value="tools">Tools</option>
+                                <option value="games">Games</option>
+                                <option value="clients">Clients</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-item">
+                            <label for="filter-tag">Filter by Tag:</label>
+                            <select id="filter-tag">
+                                <option value="all">All Tags</option>
+                                <option value="ai">AI</option>
+                                <option value="web">Web</option>
+                                <option value="mini-project">Mini Project</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-item">
+                            <label for="search-projects">Search:</label>
+                            <input type="text" id="search-projects" placeholder="Search projects...">
+                        </div>
+                    </div>
+                    
+                    <div class="projects-list" id="projects-container">
+                        <!-- Projects will be displayed here dynamically -->
+                        <div class="no-projects" id="no-projects-message">
+                            <p>No projects found. Add your first project using the button above.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications Section -->
+                <div id="certifications-section" style="display: none;">
+                    <div class="content-header">
+                        <h2>Manage Certifications</h2>
+                        <button id="add-certification-btn" class="btn-primary">
+                            <i class="fas fa-plus"></i> Add New Certification
+                        </button>
+                    </div>
+                    
+                    <div class="certifications-list" id="certifications-container">
+                        <!-- Certifications will be displayed here dynamically -->
+                        <div class="no-certifications" id="no-certifications-message">
+                            <p>No certifications found. Add your first certification using the button above.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Add/Edit Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Add New Project</h3>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="project-form">
+                    <input type="hidden" id="project-id">
+                    
+                    <div class="form-group">
+                        <label for="project-title">Project Title *</label>
+                        <input type="text" id="project-title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-short-desc">Short Description *</label>
+                        <textarea id="project-short-desc" rows="2" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-full-desc">Full Description *</label>
+                        <textarea id="project-full-desc" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-category">Category *</label>
+                        <select id="project-category" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="tools">Tools</option>
+                            <option value="games">Games</option>
+                            <option value="clients">Clients</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-tags">Tags (comma-separated) *</label>
+                        <input type="text" id="project-tags" placeholder="AI, Web, Mini Project" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-images">Project Images *</label>
+                        <input type="file" id="project-images" accept="image/*" multiple>
+                        <div id="image-preview-container" class="image-preview-container"></div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="project-featured">
+                        <label for="project-featured">Featured Project</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancel-btn" class="btn-secondary">Cancel</button>
+                        <button type="submit" id="save-project-btn" class="btn-primary">Save Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add/Edit Certification Modal -->
+    <div class="modal" id="certification-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="certification-modal-title">Add New Certification</h3>
+                <button id="close-certification-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="certification-form">
+                    <input type="hidden" id="certification-id">
+                    
+                    <div class="form-group">
+                        <label for="certification-title">Certification Title *</label>
+                        <input type="text" id="certification-title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="certification-issuer">Issuing Organization *</label>
+                        <input type="text" id="certification-issuer" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="certification-date">Date Issued *</label>
+                        <input type="month" id="certification-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="certification-description">Description *</label>
+                        <textarea id="certification-description" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="certification-logo">Logo *</label>
+                        <select id="certification-logo" required>
+                            <option value="" disabled selected>Select a logo</option>
+                            <option value="microsoft">Microsoft</option>
+                            <option value="google">Google</option>
+                            <option value="cisco">Cisco</option>
+                            <option value="coursera">Coursera</option>
+                            <option value="udemy">Udemy</option>
+                            <option value="aws">AWS</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="custom-logo-container" style="display: none;">
+                        <label for="certification-custom-logo">Upload Custom Logo</label>
+                        <input type="file" id="certification-custom-logo" accept="image/*">
+                        <div id="logo-preview-container" class="image-preview-container"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="certification-url">Certificate URL (optional)</label>
+                        <input type="url" id="certification-url" placeholder="https://example.com/certificate">
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="certification-verified">
+                        <label for="certification-verified">Verified Certificate</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancel-certification-btn" class="btn-secondary">Cancel</button>
+                        <button type="submit" id="save-certification-btn" class="btn-primary">Save Certification</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/admin.js"></script>
+    <script src="js/certifications.js"></script>
+    <script src="js/theme.js"></script>
+    
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 
